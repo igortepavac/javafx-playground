@@ -20,8 +20,14 @@ public class DependencyGraph {
         // Singleton class constructor is private.
     }
 
+    private final ScreenController screenController = new ScreenController();
+
     private final ArtistRepository artistRepository = new ArtistDatabase();
     private final EventRepository eventRepository = new EventDatabase();
+
+    public ScreenController getScreenController() {
+        return screenController;
+    }
 
     public ArtistRepository getArtistRepository() {
         return artistRepository;
