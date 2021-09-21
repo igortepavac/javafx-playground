@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.vub.ui.login.LoginController">
+    <SplitPane dividerPositions="0.5" layoutX="208.0" layoutY="120.0" prefHeight="600.0" prefWidth="800.0"
+               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+               AnchorPane.topAnchor="0.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+            <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0"
+                        AnchorPane.rightAnchor="0.0">
+                <center>
+                    <ImageView fitHeight="394.0" fitWidth="340.0" pickOnBounds="true" preserveRatio="true"
+                               BorderPane.alignment="CENTER">
+                        <Image url="@vub_logo_en.png"/>
+                    </ImageView>
+                </center>
+            </BorderPane>
+            <Label alignment="CENTER" layoutY="435.0" text="JAVA Programming Language Basics"
+                   textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+                <padding>
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                </padding>
+            </Label>
+            <Label alignment="CENTER" layoutY="487.0" text="EventXyz Project" textAlignment="CENTER"
+                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+                <padding>
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                </padding>
+            </Label>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="372.0">
+            <Label alignment="CENTER" layoutY="112.0" text="Please Login Here" textAlignment="CENTER"
+                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+                <padding>
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                </padding>
+            </Label>
+            <TextField fx:id="username" alignment="CENTER" layoutX="16.0" layoutY="214.0" promptText="Username"
+                       AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0">
+                <font>
+                    <Font size="16.0"/>
+                </font>
+            </TextField>
+            <Label alignment="CENTER" layoutY="185.0" text="Username:" textAlignment="CENTER"
+                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                <font>
+                    <Font size="16.0"/>
+                </font>
+                <padding>
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                </padding>
+            </Label>
+            <Label alignment="CENTER" layoutY="299.0" text="Password:" textAlignment="CENTER"
+                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                <font>
+                    <Font size="16.0"/>
+                </font>
+                <padding>
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                </padding>
+            </Label>
+            <PasswordField fx:id="password" alignment="CENTER" layoutX="16.0" layoutY="328.0"
+                           promptText="Password" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0">
+                <font>
+                    <Font size="16.0"/>
+                </font>
+            </PasswordField>
+            <Button fx:id="btnLogin" alignment="CENTER" layoutX="172.0" layoutY="429.0" mnemonicParsing="false"
+                    onAction="#onLoginClicked" text="Login" AnchorPane.leftAnchor="16.0"
+                    AnchorPane.rightAnchor="16.0">
+                <font>
+                    <Font size="16.0"/>
+                </font>
+            </Button>
+        </AnchorPane>
+    </SplitPane>
+</AnchorPane>

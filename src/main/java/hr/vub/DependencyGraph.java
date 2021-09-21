@@ -4,6 +4,7 @@ import hr.vub.data.database.ArtistDatabase;
 import hr.vub.data.database.EventDatabase;
 import hr.vub.data.repository.ArtistRepository;
 import hr.vub.data.repository.EventRepository;
+import hr.vub.ui.ScreenController;
 
 public class DependencyGraph {
 

@@ -1,6 +1,5 @@
-package hr.vub;
+package hr.vub.ui;
 
-import hr.vub.ui.Screen;
 import hr.vub.util.LogUtil;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
