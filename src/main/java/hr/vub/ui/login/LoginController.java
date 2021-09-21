@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 
 public class LoginController implements LoginMvp.View {
@@ -31,6 +32,15 @@ public class LoginController implements LoginMvp.View {
     public void initialize() {
         screenController = DependencyGraph.getInstance().getScreenController();
         presenter = LoginMvpFactory.getPresenter(DependencyGraph.getInstance(), this);
+        initUiListeners();
+    }
+
+    private void initUiListeners() {
+        password.setOnKeyPressed(event -> {
+            if (event.getCode().equals(KeyCode.ENTER)) {
+                onLoginClicked(null);
+            }
+        });
     }
 
     @FXML
