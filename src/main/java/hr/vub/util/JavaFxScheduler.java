@@ -11,6 +11,8 @@ import javafx.application.Platform;
 import javafx.util.Duration;
 
 /**
+ * Taken from https://github.com/ReactiveX/RxJavaFX
+ *
  * Executes work on the JavaFx UI thread.
  * This scheduler should only be used with actions that execute quickly.
  */
