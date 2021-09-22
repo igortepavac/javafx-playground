@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.vub.ui.events.EditEventController">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="150.0" layoutY="86.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="16.0">
+            <children>
+                <Label alignment="TOP_CENTER" text="UUID">
+                    <VBox.margin>
+                        <Insets top="16.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="uuidField" alignment="CENTER" disable="true" promptText="UUID is auto-generated">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </TextField>
+                <Label text="Description">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="16.0" />
+                    </VBox.margin>
+                </Label>
+                <TextField fx:id="descriptionField" alignment="CENTER" promptText="Input description here">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </TextField>
+            <Label text="Capacity">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="16.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="capacityField" alignment="CENTER" promptText="Input capacity here">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Label text="Choose a genre for a festival or an artist for a concert">
+               <VBox.margin>
+                  <Insets top="18.0" />
+               </VBox.margin>
+            </Label>
+                <Label fx:id="genreLabel" text="Genre">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="12.0" />
+                    </VBox.margin>
+                </Label>
+                <TextField fx:id="genreField" alignment="CENTER" promptText="Input genre here">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </TextField>
+            <Label layoutX="240.0" layoutY="291.0" text="Artist">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="16.0" />
+               </VBox.margin>
+            </Label>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ComboBox fx:id="artistComboBox" promptText="Choose an artist here" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" />
+               </children>
+            </AnchorPane>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </VBox>
+        <Button mnemonicParsing="false" onAction="#onSave" text="Save" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="48.0">
+            <font>
+                <Font size="16.0" />
+            </font></Button>
+    </children>
+</AnchorPane>
