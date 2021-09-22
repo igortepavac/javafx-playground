@@ -1,6 +1,7 @@
 package hr.vub.ui.events;
 
 import hr.vub.DependencyGraph;
+import hr.vub.data.models.Artist;
 import hr.vub.data.models.Concert;
 import hr.vub.data.models.Event;
 import hr.vub.data.models.Festival;
@@ -8,7 +9,6 @@ import hr.vub.data.repository.ConcertRepository;
 import hr.vub.data.repository.FestivalRepository;
 import hr.vub.ui.Screen;
 import hr.vub.ui.ScreenController;
-import hr.vub.ui.artists.EditArtistController;
 import hr.vub.util.JavaFxScheduler;
 import io.reactivex.rxjava3.core.Observable;
 import javafx.beans.property.SimpleStringProperty;
@@ -71,7 +71,9 @@ public class EventsController {
         genreColumn.setCellValueFactory(param -> {
             if (param.getValue() != null) {
                 if (param.getValue() instanceof Concert) {
-                    return new SimpleStringProperty(((Concert) param.getValue()).getArtist().getGenre());
+                    Artist artist = ((Concert) param.getValue()).getArtist();
+                    String genre = artist != null ? artist.getGenre() : "null";
+                    return new SimpleStringProperty(genre);
                 } else if (param.getValue() instanceof Festival) {
                     return new SimpleStringProperty(((Festival) param.getValue()).getGenre());
                 }
