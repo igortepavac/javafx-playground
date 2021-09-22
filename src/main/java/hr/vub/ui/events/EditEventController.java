@@ -91,9 +91,11 @@ public class EditEventController {
             Concert concert = (Concert) event;
             selectedArtist = concert.getArtist();
             artistComboBox.getSelectionModel().select(selectedArtist);
+            genreField.setDisable(true);
         } else if (event instanceof Festival) {
             Festival festival = (Festival) event;
             genreField.setText(festival.getGenre());
+            artistComboBox.setDisable(true);
         }
         descriptionField.setText(event.getDescription());
         capacityField.setText(String.valueOf(event.getCapacity()));
