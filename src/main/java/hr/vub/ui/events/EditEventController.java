@@ -122,6 +122,14 @@ public class EditEventController {
             AlertUtil.showError("Please choose a genre or an artist, not both!");
             return;
         }
+        try {
+            int capacity = Integer.parseInt(capacityField.getText());
+        } catch (NumberFormatException e) {
+            logger.warning("Invalid data in capacity field\n" + e.getMessage());
+            capacityField.setText("");
+            AlertUtil.showError("Capacity has to be a number!");
+            return;
+        }
         if (this.event != null) {
             updateEvent();
         } else {
