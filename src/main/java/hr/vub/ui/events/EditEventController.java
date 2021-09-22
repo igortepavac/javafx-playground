@@ -58,7 +58,7 @@ public class EditEventController {
     private void initArtistComboBox() {
         List<Artist> artists = artistRepository.getAll();
         artistComboBox.getItems().setAll(artists);
-        Callback<ListView<Artist>, ListCell<Artist>> cellFactory = param -> new ListCell<>() {
+        artistComboBox.setCellFactory(param -> new ListCell<>() {
             final Label label = new Label();
 
             @Override
@@ -72,9 +72,16 @@ public class EditEventController {
                     setGraphic(label);
                 }
             }
-        };
-        artistComboBox.setCellFactory(cellFactory);
-        artistComboBox.setButtonCell(cellFactory.call(null));
+        });
+        artistComboBox.setButtonCell(new ListCell<>() {
+            @Override
+            protected void updateItem(Artist item, boolean empty) {
+                super.updateItem(item, empty);
+                if (item != null) {
+                    setText(item.getName());
+                }
+            }
+        });
         artistComboBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             selectedArtist = newValue;
         });
