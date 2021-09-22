@@ -25,6 +25,7 @@ mainClassName = "hr.vub.MainApp"
 
 dependencies {
     implementation("io.reactivex.rxjava3:rxjava:3.1.1")
+    implementation("com.squareup.moshi:moshi:1.12.0")
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
