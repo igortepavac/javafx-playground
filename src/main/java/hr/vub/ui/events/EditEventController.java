@@ -109,6 +109,12 @@ public class EditEventController {
     }
 
     @FXML
+    public void onClearArtist(ActionEvent event) {
+        selectedArtist = null;
+        artistComboBox.getSelectionModel().select(null);
+    }
+
+    @FXML
     public void onSave(ActionEvent event) {
         if (StringUtil.isEmpty(descriptionField.getText()) || StringUtil.isEmpty(capacityField.getText())) {
             AlertUtil.showError("Please fill the description and capacity!");
