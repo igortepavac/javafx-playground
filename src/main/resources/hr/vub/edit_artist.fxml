@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.vub.ui.artists.EditArtistController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="150.0" layoutY="86.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="16.0">
+         <children>
+            <Label alignment="TOP_CENTER" text="UUID">
+               <VBox.margin>
+                  <Insets top="16.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="uuidField" alignment="CENTER" disable="true" promptText="UUID is auto-generated">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Label text="Name">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="16.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="nameField" alignment="CENTER" promptText="Input name here">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Label text="Genre">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="16.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="genreField" alignment="CENTER" promptText="Input genre here">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <Button mnemonicParsing="false" onAction="#onSave" text="Save" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="48.0">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
